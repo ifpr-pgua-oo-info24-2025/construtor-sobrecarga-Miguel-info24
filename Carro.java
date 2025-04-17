@@ -1,11 +1,12 @@
 import java.util.Scanner;
+
 class Carro {
 
 	private String placa;
 	private String modelo;
 	private int ano;
 	private int vel = 0;
-	private int capMaxComb = 200;
+	private int capMaxComb = 100;
 	private int quantComb = capMaxComb;
 
 	public String getPlaca() {
@@ -58,26 +59,29 @@ class Carro {
 
 	public void acelerar(Scanner scan) {
 		int aceleracao = 10, comb = 10;
-        System.out.println("digite a velocidade.");
-        aceleracao = scan.nextInt();
+		System.out.println("digite a velocidade.");
+		aceleracao = scan.nextInt();
 		aceleracao *= 0.1;
-        int vel = getVel();
-        vel += aceleracao;
+		int vel = getVel();
+		vel += aceleracao;
 		setVel(vel);
 		comb = getComb();
+		System.out.println(comb + "////////");
 		int aux = comb;
-        aux /= 0.01;
-        comb -= aux;
+		aux *= 0.01;
+		System.out.println(aux + "\\\\\\\\");
+		comb = comb - aux;
+		System.out.println(comb + "|||||||");
 		setComb(comb);
 	}
 
 	public void freiar(Scanner scan) {
 		int freio = 0;
-        System.out.println("digite o valor da frenagem.");
+		System.out.println("digite o valor da frenagem.");
 		freio *= -0.1;
 		int vel = getVel();
-        vel -= freio;
-        setVel(vel);
+		vel -= freio;
+		setVel(vel);
 	}
 
 	public void abastecer() {
