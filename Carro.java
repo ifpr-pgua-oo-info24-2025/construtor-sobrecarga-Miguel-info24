@@ -8,6 +8,8 @@ class Carro {
 	private int vel = 0;
 	private int capMaxComb = 100;
 	private int quantComb = capMaxComb;
+	private Condutor pessoa;
+	private Motor motor;
 
 	public String getPlaca() {
 		return placa;
