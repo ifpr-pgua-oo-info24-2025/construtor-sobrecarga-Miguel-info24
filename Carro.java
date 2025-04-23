@@ -5,9 +5,6 @@ class Carro {
 	private String placa;
 	private String modelo;
 	private int ano;
-	private int vel = 0;
-	private int capMaxComb = 100;
-	private int quantComb = capMaxComb;
 	private Condutor pessoa;
 	private Motor motor;
 
@@ -23,18 +20,6 @@ class Carro {
 		return ano;
 	}
 
-	public int getVel() {
-		return vel;
-	}
-
-	public int getComb() {
-		return quantComb;
-	}
-
-	public int getMax() {
-		return capMaxComb;
-	}
-
 	public void setPlaca(String novaPlaca) {
 		this.placa = novaPlaca;
 	}
@@ -47,49 +32,8 @@ class Carro {
 		this.ano = novoAno;
 	}
 
-	public void setVel(int novaVel) {
-		this.vel = novaVel;
-	}
+	public Carro(String placa, String modelo, int ano, Condutor pessoa, Motor motor)
+	{
 
-	public void setComb(int novoQuantComb) {
-		this.quantComb = novoQuantComb;
 	}
-
-	public void setMax(int novoMax) {
-		this.capMaxComb = novoMax;
-	}
-
-	public void acelerar(Scanner scan) {
-		int aceleracao = 10, comb = 10;
-		System.out.println("digite a velocidade.");
-		aceleracao = scan.nextInt();
-		aceleracao *= 0.1;
-		int vel = getVel();
-		vel += aceleracao;
-		setVel(vel);
-		comb = getComb();
-		System.out.println(comb + "////////");
-		int aux = comb;
-		aux *= 0.01;
-		System.out.println(aux + "\\\\\\\\");
-		comb = comb - aux;
-		System.out.println(comb + "|||||||");
-		setComb(comb);
-	}
-
-	public void freiar(Scanner scan) {
-		int freio = 0;
-		System.out.println("digite o valor da frenagem.");
-		freio *= -0.1;
-		int vel = getVel();
-		vel -= freio;
-		setVel(vel);
-	}
-
-	public void abastecer() {
-		int comb;
-		comb = getMax();
-		setComb(comb);
-	}
-
 }
