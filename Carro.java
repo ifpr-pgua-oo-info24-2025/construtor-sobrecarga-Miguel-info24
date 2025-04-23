@@ -1,12 +1,20 @@
-import java.util.Scanner;
-
 class Carro {
-
+	private String marca;
 	private String placa;
 	private String modelo;
 	private int ano;
-	private Condutor pessoa;
+	private Condutor condutor;
 	private Motor motor;
+
+	public Carro(String marca, String placa, String modelo, int ano, Condutor condutor, Motor motor) {
+		this.marca = marca;
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.condutor = condutor;
+		this.motor = motor;
+
+	}
 
 	public String getPlaca() {
 		return placa;
@@ -18,6 +26,18 @@ class Carro {
 
 	public int getAno() {
 		return ano;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public Condutor getCondutor() {
+		return condutor;
+	}
+
+	public Motor getMotor() {
+		return motor;
 	}
 
 	public void setPlaca(String novaPlaca) {
@@ -32,8 +52,16 @@ class Carro {
 		this.ano = novoAno;
 	}
 
-	public Carro(String placa, String modelo, int ano, Condutor pessoa, Motor motor)
-	{
-
+	public void setCondutor(Condutor novoCondutor) {
+		this.condutor = novoCondutor;
 	}
+
+	public void setMotor(Motor novoMotor) {
+		this.motor = novoMotor;
+	}
+
+	public void setMarca(String novaMarca) {
+		this.marca = novaMarca;
+	}
+
 }
