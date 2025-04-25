@@ -1,8 +1,8 @@
 public class Condutor {
     private String nome;
-    private int cnh;
+    private String cnh;
 
-    public Condutor(String nome, int cnh) {
+    public Condutor(String nome, String cnh) {
         this.nome = nome;
         this.cnh = cnh;
     }
@@ -11,7 +11,7 @@ public class Condutor {
         return nome;
     }
 
-    public int getCnh() {
+    public String getCnh() {
         return cnh;
     }
 
@@ -19,7 +19,7 @@ public class Condutor {
         this.nome = novoNome;
     }
 
-    public void setCnh(int novaCnh) {
+    public void setCnh(String novaCnh) {
         this.cnh = novaCnh;
     }
 }

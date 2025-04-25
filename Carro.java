@@ -16,6 +16,29 @@ class Carro {
 
 	}
 
+	public Carro(String marca, String placa, String modelo, int ano, Motor motor) {
+		this.marca = marca;
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.motor = motor;
+	}
+	
+	public Carro(String marca, String placa, String modelo, int ano, Condutor condutor) {
+		this.marca = marca;
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+		this.condutor = condutor;
+	}
+
+	public Carro(String marca, String placa, String modelo, int ano) {
+		this.marca = marca;
+		this.placa = placa;
+		this.modelo = modelo;
+		this.ano = ano;
+	}
+
 	public String getPlaca() {
 		return placa;
 	}
@@ -64,4 +87,9 @@ class Carro {
 		this.marca = novaMarca;
 	}
 
+	public String toString() {
+		return "Marca: " + marca + "\nModelo: " + modelo + "\nPlaca: " + placa +
+			   "\nMotor: " + (motor != null ? motor.getTipo() + " " + motor.getPotencia() : "Sem motor") +
+			   "\nCondutor: " + (condutor != null ? condutor.getNome()+ " " + condutor.getCnh() : "Sem condutor");
+	}
 }
